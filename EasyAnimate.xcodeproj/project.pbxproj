@@ -14,13 +14,15 @@
 		86EACB6F18453C1F0055BE53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EACB6E18453C1F0055BE53 /* main.m */; };
 		86EACB7318453C1F0055BE53 /* EAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EACB7218453C1F0055BE53 /* EAAppDelegate.m */; };
 		86EACB7618453C1F0055BE53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86EACB7418453C1F0055BE53 /* Main.storyboard */; };
-		86EACB7918453C1F0055BE53 /* EAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EACB7818453C1F0055BE53 /* EAViewController.m */; };
 		86EACB7B18453C1F0055BE53 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86EACB7A18453C1F0055BE53 /* Images.xcassets */; };
 		86EACB8218453C1F0055BE53 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86EACB8118453C1F0055BE53 /* XCTest.framework */; };
 		86EACB8318453C1F0055BE53 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86EACB6218453C1F0055BE53 /* Foundation.framework */; };
 		86EACB8418453C1F0055BE53 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86EACB6618453C1F0055BE53 /* UIKit.framework */; };
 		86EACB8C18453C1F0055BE53 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86EACB8A18453C1F0055BE53 /* InfoPlist.strings */; };
 		86EACB8E18453C1F0055BE53 /* EasyAnimateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EACB8D18453C1F0055BE53 /* EasyAnimateTests.m */; };
+		86EACB9918453E320055BE53 /* EAMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EACB9818453E320055BE53 /* EAMenuViewController.m */; };
+		86EACB9C18453E6E0055BE53 /* EAAnimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EACB9B18453E6E0055BE53 /* EAAnimateViewController.m */; };
+		86EACB9F18453E8F0055BE53 /* EACharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EACB9E18453E8F0055BE53 /* EACharacterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +47,18 @@
 		86EACB7118453C1F0055BE53 /* EAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAAppDelegate.h; sourceTree = "<group>"; };
 		86EACB7218453C1F0055BE53 /* EAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EAAppDelegate.m; sourceTree = "<group>"; };
 		86EACB7518453C1F0055BE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		86EACB7718453C1F0055BE53 /* EAViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EAViewController.h; sourceTree = "<group>"; };
-		86EACB7818453C1F0055BE53 /* EAViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EAViewController.m; sourceTree = "<group>"; };
 		86EACB7A18453C1F0055BE53 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		86EACB8018453C1F0055BE53 /* EasyAnimateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyAnimateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86EACB8118453C1F0055BE53 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		86EACB8918453C1F0055BE53 /* EasyAnimateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EasyAnimateTests-Info.plist"; sourceTree = "<group>"; };
 		86EACB8B18453C1F0055BE53 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		86EACB8D18453C1F0055BE53 /* EasyAnimateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EasyAnimateTests.m; sourceTree = "<group>"; };
+		86EACB9718453E320055BE53 /* EAMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAMenuViewController.h; sourceTree = "<group>"; };
+		86EACB9818453E320055BE53 /* EAMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAMenuViewController.m; sourceTree = "<group>"; };
+		86EACB9A18453E6E0055BE53 /* EAAnimateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAAnimateViewController.h; sourceTree = "<group>"; };
+		86EACB9B18453E6E0055BE53 /* EAAnimateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAAnimateViewController.m; sourceTree = "<group>"; };
+		86EACB9D18453E8F0055BE53 /* EACharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EACharacterViewController.h; sourceTree = "<group>"; };
+		86EACB9E18453E8F0055BE53 /* EACharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EACharacterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +121,13 @@
 				86EACB7118453C1F0055BE53 /* EAAppDelegate.h */,
 				86EACB7218453C1F0055BE53 /* EAAppDelegate.m */,
 				86EACB7418453C1F0055BE53 /* Main.storyboard */,
-				86EACB7718453C1F0055BE53 /* EAViewController.h */,
-				86EACB7818453C1F0055BE53 /* EAViewController.m */,
 				86EACB7A18453C1F0055BE53 /* Images.xcassets */,
+				86EACB9718453E320055BE53 /* EAMenuViewController.h */,
+				86EACB9818453E320055BE53 /* EAMenuViewController.m */,
+				86EACB9A18453E6E0055BE53 /* EAAnimateViewController.h */,
+				86EACB9B18453E6E0055BE53 /* EAAnimateViewController.m */,
+				86EACB9D18453E8F0055BE53 /* EACharacterViewController.h */,
+				86EACB9E18453E8F0055BE53 /* EACharacterViewController.m */,
 				86EACB6918453C1F0055BE53 /* Supporting Files */,
 			);
 			path = EasyAnimate;
@@ -250,7 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86EACB7918453C1F0055BE53 /* EAViewController.m in Sources */,
+				86EACB9C18453E6E0055BE53 /* EAAnimateViewController.m in Sources */,
+				86EACB9F18453E8F0055BE53 /* EACharacterViewController.m in Sources */,
+				86EACB9918453E320055BE53 /* EAMenuViewController.m in Sources */,
 				86EACB7318453C1F0055BE53 /* EAAppDelegate.m in Sources */,
 				86EACB6F18453C1F0055BE53 /* main.m in Sources */,
 			);
@@ -461,6 +473,7 @@
 				86EACB9318453C1F0055BE53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86EACB9418453C1F0055BE53 /* Build configuration list for PBXNativeTarget "EasyAnimateTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +482,7 @@
 				86EACB9618453C1F0055BE53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

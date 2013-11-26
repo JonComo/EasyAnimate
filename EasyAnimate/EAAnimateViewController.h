@@ -1,5 +1,5 @@
 //
-//  EAViewController.h
+//  EAAnimateViewController.h
 //  EasyAnimate
 //
 //  Created by Jon Como on 11/26/13.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EAViewController : UIViewController
+@class SKView;
+
+@interface EAAnimateViewController : UIViewController
 
 @end
