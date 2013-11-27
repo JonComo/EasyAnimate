@@ -1,5 +1,5 @@
 //
-//  EAAnimateViewController.h
+//  EAScrollView.h
 //  EasyAnimate
 //
 //  Created by Jon Como on 11/26/13.
@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EAAnimateViewController : UIViewController
+@class EADrawView;
+
+@interface EAScrollView : UIScrollView
+
+@property (nonatomic, weak) EADrawView *drawView;
 
 @end

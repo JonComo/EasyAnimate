@@ -1,13 +1,13 @@
 //
-//  EAAnimateViewController.h
+//  EAPart.h
 //  EasyAnimate
 //
 //  Created by Jon Como on 11/26/13.
 //  Copyright (c) 2013 Jon Como. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <SpriteKit/SpriteKit.h>
 
-@interface EAAnimateViewController : UIViewController
+@interface EAPart : SKSpriteNode
 
 @end

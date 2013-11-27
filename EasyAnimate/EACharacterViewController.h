@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@class EAPart;
+@class EACharacterViewController;
+
+@protocol EACharacterViewControllerDelegate <NSObject>
+
+-(void)characterViewController:(EACharacterViewController *)characterVC createdPart:(EAPart *)part;
+
+@end
+
 @interface EACharacterViewController : UIViewController
+
+@property (nonatomic, weak) id<EACharacterViewControllerDelegate> delegate;
 
 @end
