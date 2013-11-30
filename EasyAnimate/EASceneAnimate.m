@@ -34,8 +34,8 @@
         
         touchNode = [SKNode new];
         touchNode.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:2];
-        touchNode.physicsBody.dynamic = NO;
         touchNode.name = @"touch";
+        touchNode.physicsBody.dynamic = NO;
         
         SKSpriteNode *debugRect = [[SKSpriteNode alloc] initWithColor:[UIColor redColor] size:CGSizeMake(4, 4)];
         [touchNode addChild:debugRect];
@@ -73,8 +73,49 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     //dragging sprites
-    NSArray *nodes = [self nodesAtPoint:[[touches anyObject] locationInNode:self]];
+    CGPoint locationScene = [[touches anyObject] locationInNode:self.sceneSprite];
     
+    if (locationScene.y > self.parts.size.height)
+    {
+        //in scene
+        CGPoint locationScene = [[touches anyObject] locationInNode:self.sceneSprite];
+        
+        SKNode *touchedNode = [self.parts nodeAtPoint:locationScene];
+        
+        touchNode.position = locationScene;
+        [self.sceneSprite addChild:touchNode];
+        
+        springJoint = [SKPhysicsJointSpring jointWithBodyA:touchNode.physicsBody bodyB:touchedNode.physicsBody anchorA:touchNode.position  anchorB:touchedNode.position];
+        
+        [self.physicsWorld addJoint:springJoint];
+        
+    }else{
+        //in parts
+        CGPoint locationParts = [[touches anyObject] locationInNode:self.parts];
+        
+        SKNode *touchedNode = [self.parts nodeAtPoint:locationParts];
+        
+        if ([touchedNode isKindOfClass:[EAPart class]]){
+            //duplicate and drag it!
+            
+            SKSpriteNode *copy = [touchedNode copy];
+            
+            copy.name = [NSString stringWithFormat:@"%i", uniqueCounter];
+            uniqueCounter ++;
+            
+            [self.sceneSprite addChild:copy];
+            copy.position = locationScene;
+            
+            touchNode.position = locationScene;
+            [self.sceneSprite addChild:touchNode];
+            
+            springJoint = [SKPhysicsJointSpring jointWithBodyA:touchNode.physicsBody bodyB:copy.physicsBody anchorA:touchNode.position anchorB:copy.position];
+            
+            [self.physicsWorld addJoint:springJoint];
+        }
+    }
+    
+    /*
     BOOL touchedScene = NO;
     
     for (SKNode *node in nodes){
@@ -83,7 +124,7 @@
         }
     }
     
-    if (touchedScene)
+    if (locationGlobal.y > self.parts.size.height)
     {
         //in scene
         NSLog(@"Touched scene");
@@ -118,23 +159,23 @@
             [self.sceneSprite addChild:copy];
             copy.position = sceneLocation;
             
-            [self addChild:touchNode];
             touchNode.position = sceneLocation;
+            [self addChild:touchNode];
             
             springJoint = [SKPhysicsJointSpring jointWithBodyA:touchNode.physicsBody bodyB:copy.physicsBody anchorA:CGPointZero  anchorB:sceneLocation];
             [self.physicsWorld addJoint:springJoint];
             
             //nodeDragging = copy;
         }
-    }
+    } */
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    CGPoint locationScene = [[touches anyObject] locationInNode:self.sceneSprite];
-    CGPoint locationGlobal = [[touches anyObject] locationInNode:self];
-
-    touchNode.position = locationGlobal;
+    CGPoint locationScene = [[touches anyObject] locationInNode:self];
+    
+    touchNode.position = locationScene;
+    touchNode.physicsBody.velocity = CGVectorMake(0, 0);
     
     /*
     if (nodeDragging){
@@ -147,18 +188,18 @@
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    CGPoint location = [[touches anyObject] locationInNode:self.sceneSprite];
+    CGPoint locationScene = [[touches anyObject] locationInNode:self];
     
     [touchNode removeFromParent];
     [self.physicsWorld removeJoint:springJoint];
     springJoint = nil;
     
-    if (nodeDragging && location.y < -self.sceneSprite.size.height/2){
-        //remove that node as you dragged it back into the parts
-        [nodeDragging removeFromParent];
-    }
-    
-    nodeDragging = nil;
+//    if (nodeDragging && location.y < -self.sceneSprite.size.height/2){
+//        //remove that node as you dragged it back into the parts
+//        [nodeDragging removeFromParent];
+//    }
+//    
+//    nodeDragging = nil;
 }
 
 @end
